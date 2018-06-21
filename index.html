@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css ">
+	<title>Anthropomorphic Zoo Animals school</title>
+</head>
+<body>
+	
+	
+	  <div class="a">
+		<div id="main-headding" class="row">
+		 <div class="col-sm-3 col-xs-5 col-md-2 col-lg-2 "> <img src="logo.JPG" class="img-responsive"> </div>
+		 <div class="col-sm-9 col-xs-7 col-md-10 col-lg-10">
+		   <h2><b>Anthropomorphic Zoo Animals school</b></h2>
+		   <p><b>International Animals School</b></p>
+			<p><b>ESTD - 6789</b></p>
+		 </div>
+		</div>
+	  </div>
+
+
+	<nav class="navbar navbar-expand-lg">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a id="Home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a id="Campus" class="nav-link" href="#">Campus</a>
+      </li>
+	  <li class="nav-item">
+        <a id="Academy" class="nav-link" href="#">Academy</a>
+      </li>
+	  <li class="nav-item">
+        <a id="Contact" class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+	
+	<div class="wrapper">
+		
+	</div>
+	<div id="main-content" class="container">
+		<p></p>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#Home').on('click', function(){
+                $('#navbarSupportedContent').children('ul').children('li').removeClass('active');
+                $(this).addClass('active');
+                $.ajax({url: "home.html", success: function(result){
+                    $("#main-content").html(result);
+                }});
+            });
+            $('#Campus').on('click', function(){
+                $('#navbarSupportedContent').children('ul').children('li').removeClass('active');
+                $(this).addClass('active');
+                $.ajax({url: "Campus.html", success: function(result){
+                    $("#main-content").html(result);
+                }});
+            });
+            $('#Academy').on('click', function(){
+                $('#navbarSupportedContent').children('ul').children('li').removeClass('active');
+                $(this).addClass('active');
+                $.ajax({url: "Academy.html", success: function(result){
+                    $("#main-content").html(result);
+                }});
+            });
+			$('#Contact').on('click', function(){
+                $('#navbarSupportedContent').children('ul').children('li').removeClass('active');
+                $(this).addClass('active');
+                $.ajax({url: "Contact.html", success: function(result){
+                    $("#main-content").html(result);
+                }});
+            });
+        });
+    </script>
+	<div class="seperator"></div>
+	<footer class="fixed-bottom">
+        <div class="text-muted"><strong>&copy;|All Rights Reserved</strong></div>
+	</footer>
+    
+</body>
+</html>
